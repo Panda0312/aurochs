@@ -55,3 +55,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
    npm run prepare
    npx husky add .husky/pre-commit "npx lint-staged"
 4. prettier install: npm install --save-dev --save-exact prettier
+5. npm i -D @craco/craco
