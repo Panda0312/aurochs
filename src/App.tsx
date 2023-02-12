@@ -1,16 +1,19 @@
 import { Link, Outlet } from "react-router-dom";
 
+import { AppRoot, Content, Nav } from "./StyledApp";
+
 const App = () => {
   return (
-    <div className="App">
-      <Link to="/">home</Link>
-      <br />
-      <Link to="/other">other</Link>
-      <br />
-      <Link to="/unknown">unknown</Link>
-      <br />
-      <Outlet />
-    </div>
+    <AppRoot>
+      <Nav>
+        <Link to="/">home</Link>
+        <Link to="/other">other</Link>
+        <Link to="/unknown">unknown</Link>
+      </Nav>
+      <Content>
+        <Outlet />
+      </Content>
+    </AppRoot>
   );
 };
 
