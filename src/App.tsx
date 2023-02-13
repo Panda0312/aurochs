@@ -7,7 +7,7 @@ const App = () => {
     <AppRoot>
       <Nav>
         <Link to="/">home</Link>
-        <Link to="/other">other</Link>
+        <Link to="/grocery">Grocery</Link>
         <Link to="/unknown">unknown</Link>
       </Nav>
       <Content>

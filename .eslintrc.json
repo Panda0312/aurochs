@@ -56,5 +56,6 @@
         "extensions": [".ts", ".tsx"]
       }
     }
-  }
+  },
+  "ignorePatterns": ["src/setupProxy*.js"]
 }
