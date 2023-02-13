@@ -1,4 +1,9 @@
-FROM node:16 AS builder
+FROM node:16.14.0-alpine
+RUN addgroup app && adduser -S -G app app
+USER app
+COPY package.json .
 WORKDIR /app
 COPY . .
-RUN npm install && npm build
+RUN npm install
+EXPOSE 3000
+CMD ["npm", "start"]
