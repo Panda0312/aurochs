@@ -1,7 +1,8 @@
 {
   "en": {
     "translation": {
-      "test": "Test in EN"
+      "test": "Test in EN",
+      "grocery_milk_box": "Milk Box"
     }
   }
 }

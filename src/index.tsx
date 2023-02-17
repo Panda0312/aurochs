@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router-dom";
 
 import reportWebVitals from "./reportWebVitals";
 import router from "./router";
+import { GlobalStyle } from "./StyledApp";
 import "./i18n";
 
 const root = ReactDOM.createRoot(
@@ -14,6 +15,7 @@ root.render(
     <Suspense>
       <RouterProvider router={router} />
     </Suspense>
+    <GlobalStyle />
   </React.StrictMode>
 );
 

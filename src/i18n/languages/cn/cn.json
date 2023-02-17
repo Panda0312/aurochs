@@ -1,7 +1,8 @@
 {
   "cn": {
     "translation": {
-      "test": "测试中文"
+      "test": "测试中文",
+      "grocery_milk_box": "牛奶箱"
     }
   }
 }
