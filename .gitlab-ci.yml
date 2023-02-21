@@ -1,29 +1,24 @@
 default:
   image: node:16.19.0
 
+cache:
+  key: $CI_COMMIT_REF_SLUG
+  paths:
+    - .npm/
+
+before_script:
+  - npm ci --cache .npm --prefer-offline
+
 stages:
-  - install
   - lint          # List of stages for jobs, and their order of execution
   - test
   - build
   - deploy
 
-install-job:
-  stage: install
-  script:
-    - npm install
-  cache:
-    key: node-modules-cache
-    paths:
-      - node_modules/
-
 lint-format-job:
   stage: lint
-  cache: 
-    key: node-modules-cache
-    paths:
-      - node_modules/
   script:
+    - echo $CI_COMMIT_REF_SLUG
     - npm run lint
 
 unit-test-job:   # This job runs in the test stage.
