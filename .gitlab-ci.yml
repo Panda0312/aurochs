@@ -12,15 +12,15 @@ install-job:
   stage: install
   script:
     - npm install
-  artifacts:
+  cache:
+    key: node-modules-cache
     paths:
       - node_modules/
 
 lint-format-job:
   stage: lint
   script:
-    - npm run lint:fix
-    - npm run format
+    - npm run lint
 
 unit-test-job:   # This job runs in the test stage.
   stage: test    # It only starts when the job in the build stage completes successfully.
