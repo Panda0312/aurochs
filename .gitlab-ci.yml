@@ -1,8 +1,8 @@
 stages:
   - install
   - lint          # List of stages for jobs, and their order of execution
-  - build
   - test
+  - build
   - deploy
 
 install-job:
