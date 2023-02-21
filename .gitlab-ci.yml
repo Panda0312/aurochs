@@ -19,6 +19,8 @@ install-job:
 
 lint-format-job:
   stage: lint
+  cache: 
+    key: node-modules-cache
   script:
     - npm run lint
 
