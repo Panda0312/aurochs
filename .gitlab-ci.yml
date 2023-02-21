@@ -21,6 +21,8 @@ lint-format-job:
   stage: lint
   cache: 
     key: node-modules-cache
+    paths:
+      - node_modules/
   script:
     - npm run lint
 
