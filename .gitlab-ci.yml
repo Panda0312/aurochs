@@ -12,6 +12,9 @@ install-job:
   stage: install
   script:
     - npm install
+  artifacts:
+    paths:
+      - node_modules/
 
 lint-format-job:
   stage: lint
