@@ -11,7 +11,7 @@ install-job:
     - npm install
 
 lint-format-job:
-  stage: lintFormat
+  stage: lint
   script:
     - npm run lint:fix
     - npm run format
