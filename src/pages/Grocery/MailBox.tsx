@@ -1,5 +1,6 @@
 import { useRecoilState, useSetRecoilState } from "recoil";
 
+import { CustomButton } from "@/components/common/styled";
 import { mailList, mailText } from "@/store/GroceryState";
 
 import { MailList } from "./MailList";
@@ -14,19 +15,21 @@ export const MailBox = () => {
       <BoxHeader>Mail Box</BoxHeader>
       <div>
         <MessageInput value={text} onChange={e => setText(e.target.value)} />
-        <button
+        <CustomButton
           onClick={() => {
-            const newItem: TMailItem = {
-              id: `${new Date().getTime()}`,
-              createTime: new Date().getTime(),
-              content: text,
-              status: "",
-            };
-            setList(list => [...list, newItem]);
+            if (text.length) {
+              const newItem: TMailItem = {
+                id: `${new Date().getTime()}`,
+                createTime: new Date().getTime(),
+                content: text,
+                status: "",
+              };
+              setList(list => [...list, newItem]);
+            }
           }}
         >
           deliver
-        </button>
+        </CustomButton>
       </div>
       <MailList />
     </BoxRoot>
